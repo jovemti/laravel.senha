@@ -15,11 +15,11 @@ class CreateGatesTable extends Migration
     {
         Schema::create('gates', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('portao');
             $table->string('placa');
+            $table->string('portao');
             $table->string('nfe');
-            $table->string('user');
-            $table->foreign('user')->references('id')->on('users')->onDelete('cascade');
+            // $table->string('user');
+            // $table->foreign('user')->references('id')->on('users')->onDelete('cascade');
             $table->bigInteger('senha');
             $table->timestamps();
         });

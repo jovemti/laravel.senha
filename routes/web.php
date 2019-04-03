@@ -11,10 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/php/', function () {
-    die(phpinfo());
-});
+Route::get('/', KeyController::class.'@index');
+Route::post('/key/generate', KeyController::class.'@generate');
